@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<h1>Login</h1>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<!-- evaluations/templates/customer_login.html -->
+<form method="post">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+    <br>
+
+    <p>Don't have an account?</p>
+    <a href="{% url 'evaluation:register' %}">Register</a>
+</form>
+
+
+{% endblock content %}

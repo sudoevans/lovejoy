@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+
+{% block title %}Welcome to Lovejoy's Evaluation Website{% endblock %}
+
+{% block content %}
+<h1>Welcome to Lovejoy's Evaluation Website!</h1>
+<div class="container mx" >
+    <div class="title">Lovejoy Evaluation Website</div>
+    <hr>
+
+    <p>Choose an Option:</p>
+        <a href="{% url 'evaluation:login' %}">Customer Login</a>
+        <br>
+        <a href="{% url 'evaluation:register' %}">Register</a>
+    </ul>
+    <!-- Admin Login -->
+
+    <br>
+       <a href="{% url 'evaluation:admin_login' %}">Admin Login</a>
+    
+</div>
+<p>Please login or register to continue</p>
+{% endblock %}
